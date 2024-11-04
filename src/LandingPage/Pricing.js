@@ -1,57 +1,53 @@
+// Pricing.js
 import React from 'react';
 
 const Pricing = () => {
   const plans = [
     {
-      name: "Basic",
-      price: "$8",
-      frequency: "/mo",
+      name: "Osnovni paket",
+      price: "30€",
+      frequency: "/mesec",
       features: [
-        "10,000 Words",
-        "Basic AI Model",
-        "Standard Prompts",
-        "Brand Voice & Tone",
-        "Limited Translations",
+        "Neomejeno Storyijev",
+        "Dogodki v Week in review",
       ],
       buttonLabel: "Get Basic Access",
-      buttonStyle: "bg-gray-200 text-gray-800",
+      buttonStyle: "bg-gray-700 text-white", // Updated for dark theme
     },
     {
-      name: "Standard",
-      price: "$16",
-      frequency: "/mo",
+      name: "Standard paket",
+      price: "35€",
+      frequency: "/mesec",
       features: [
-        "50,000 Words",
-        "Advanced AI Model",
-        "Standard & Expert Prompts",
-        "Custom Brand Voice & Tone",
-        "Unlimited Translations",
+        "Neomejeno Objav",
+        "Neomejeno Storyijev",
+        "Dogodki v Week in review",
       ],
       buttonLabel: "Get Standard Access",
-      buttonStyle: "bg-black text-white",
+      buttonStyle: "bg-gray-700 text-white", // Updated for dark theme
     },
     {
-      name: "Premium",
-      price: "$32",
-      frequency: "/mo",
+      name: "Premium paket",
+      price: "50€",
+      frequency: "/mesec",
       features: [
-        "Unlimited Words",
-        "Premium AI Model",
-        "All Prompt Types",
-        "Custom Brand Voice & Tone",
-        "Priority Support",
+        "Neomejeno Objav",
+        "Neomejeno Storyijev",
+        "Dogodki v Week in review",
+        "Promocija preko promotorjev",
+        "Najem Content ekipe",
       ],
       buttonLabel: "Get Premium Access",
-      buttonStyle: "bg-gray-200 text-gray-800",
+      buttonStyle: "bg-gray-700 text-white", // Updated for dark theme
     },
   ];
 
   return (
-    <div className="py-16 px-8 bg-white text-center">
+    <div className="py-16 px-8 bg-gray-900 text-center">
       {/* Header Section */}
-      <h2 className="text-3xl font-bold mb-4 text-gray-900">Affordable Plans</h2>
-      <p className="text-gray-500 mb-12">
-        Choose the plan that fits your needs and get started with our powerful tools.
+      <h2 className="text-3xl font-bold mb-4 text-white">Naročnine</h2>
+      <p className="text-gray-400 mb-12">
+        Izberi paket in doseži tisoče ljudi
       </p>
 
       {/* Pricing Cards */}
@@ -59,8 +55,7 @@ const Pricing = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="py-12 px-4 border rounded-lg bg-white text-gray-900"
-        
+            className="py-12 px-4 border hover:border-custom-orange rounded-lg bg-gray-800 text-white"
           >
             <h3 className="text-xl font-semibold mb-4">{plan.name}</h3>
             <div className="flex justify-center items-baseline mb-4">
@@ -70,14 +65,14 @@ const Pricing = () => {
 
             <ul className="mb-6 space-y-6">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center justify-center">
+                <li key={i} className="flex items-center justify-center text-gray-300">
                   <span className="mr-2">✔</span> {feature}
                 </li>
               ))}
             </ul>
 
             <button
-              className={`w-96 py-3 rounded-md font-semibold ${plan.buttonStyle} hover:opacity-90`}
+              className={`w-full py-3 rounded-md font-semibold ${plan.buttonStyle} hover:opacity-90 hover:bg-custom-orange`}
             >
               {plan.buttonLabel}
             </button>

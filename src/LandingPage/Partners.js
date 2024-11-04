@@ -1,3 +1,4 @@
+// Partners.js
 import React from 'react';
 
 const Partners = () => {
@@ -12,16 +13,16 @@ const Partners = () => {
   ];
 
   return (
-    <div className="my-16 px-8">
+    <div className="px-8 bg-gray-900 py-16">
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+      <h2 className="text-3xl font-bold text-center text-white mb-8">
        Partnerji
       </h2>
 
       {/* Partners Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center">
         {partners.map((partner, index) => (
-          <div key={index} className="w-32 h-32 flex items-center justify-center bg-gray-100 rounded-md shadow-md">
+          <div key={index} className="w-32 h-32 flex items-center justify-center bg-gray-800 rounded-md shadow-md">
             {/* Placeholder image, replace src with actual partner image URL */}
             <img src={partner} alt={`Partner ${index + 1}`} className="object-contain w-full h-full p-2" />
           </div>
