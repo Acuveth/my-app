@@ -51,7 +51,7 @@ const Pricing = () => {
       </p>
 
       {/* Pricing Cards */}
-      <div className="mx-24 grid gap-12 md:grid-cols-3">
+      <div className="mx-36 grid gap-12 md:grid-cols-3">
         {plans.map((plan, index) => (
           <div
             key={index}
